@@ -6,6 +6,9 @@ must be run as intended user
 
 run ~/Tools/gfs/setup.sh
 
+    note setup.sh will use Google App Engine Authentication for service based athentication edit the setup.sh before running
+    google-drive-ocamlfuse -id 12345678.apps.googleusercontent.com -secret abcde12345
+
 create mountpoints one folder per teamdrive
 	
     mkdir ~/Google
