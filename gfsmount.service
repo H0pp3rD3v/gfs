@@ -1,0 +1,15 @@
+[Unit]
+Description=Automate GFS Mount and Dismount
+After=network.target network-online.target
+Requires=network-online.target
+
+[Service]
+User=USER_NAME
+Type=oneshot
+ExecStart=/home/USER_NAME/Tools/gfs/init.sh
+ExecReload=/home/USER_NAME/Tools/gfs/renew.sh
+ExecStop=/home/USER_NAME/Tools/gfs/die.sh
+RemainAfterExit=True
+
+[Install]
+WantedBy=default.target
